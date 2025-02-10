@@ -1,0 +1,157 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #c8e3e1;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background: #c8e3e1;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Section */
+main {
+    padding: 2rem;
+}
+
+/* Form Section */
+form {
+    display: grid;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+input, select, button {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #0078d7;
+    box-shadow: 0 0 4px rgba(0, 120, 215, 0.4);
+}
+
+button {
+    background: #0078d7;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #005fa3;
+}
+
+/* Product List Section */
+#productList {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#productList h2 {
+    margin-bottom: 1rem;
+}
+
+.product-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-item:last-child {
+    border-bottom: none;
+}
+
+.product-item img {
+    max-width: 50px;
+    border-radius: 4px;
+    margin-right: 1rem;
+}
+/* General styles for the product container */
+.product-div {
+    border: 1px solid #ddd; /* Light border for separation */
+    border-radius: 8px; /* Rounded corners */
+    padding: 16px; /* Space inside the container */
+    margin: 10px 0; /* Space between containers */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9; /* Light background */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effect */
+}
+
+.product-div:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Product name styling */
+.product-div h3 {
+    margin: 8px 0; /* Space around the title */
+    font-size: 18px;
+    color: #333; /* Dark text color for contrast */
+    text-align: center;
+}
+
+/* Category and price styles */
+.product-div p {
+    margin: 4px 0; /* Space around text */
+    font-size: 14px;
+    color: #666; /* Slightly lighter text color */
+}
+
+/* Product image styles */
+.product-div img {
+    max-width: 100%; /* Responsive image */
+    height: auto;
+    border-radius: 4px; /* Rounded edges for images */
+    margin: 8px 0; /* Space around the image */
+}
+
+/* Stock input styles */
+.product-div .stock-input {
+    width: 60px; /* Small size */
+    padding: 4px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* Button styles */
+.product-div button {
+    margin: 8px 4px; /* Space around buttons */
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #007bff; /* Primary blue color */
+    color: #fff; /* White text */
+    transition: background-color 0.2s ease;
+}
+
+.product-div button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}

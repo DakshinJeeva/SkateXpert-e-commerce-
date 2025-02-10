@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Page</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-bottom: 10px;
+  color: #007BFF;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+button {
+  background: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #007BFF;
+  color: #fff;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 10px;
+}
+
+li {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- User Information Section -->
+    <section class="user-info">
+      <h2>User Information</h2>
+      <p><strong>Name:</strong> John Doe</p>
+      <p><strong>Email:</strong> john.doe@example.com</p>
+      <p><strong>Phone:</strong> +1234567890</p>
+      <button id="edit-info">Edit Info</button>
+    </section>
+
+    <!-- Order History Section -->
+    <section class="order-history">
+      <h2>Order History</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="order-table">
+          <!-- JS will populate this -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Cart Section -->
+    <section class="cart">
+      <h2>Cart Items</h2>
+      <ul id="cart-items">
+        <!-- JS will populate this -->
+      </ul>
+      <button id="checkout">Checkout</button>
+    </section>
+  </div>
+
+  <script>
+    
+  </script>
+</body>
+</html>

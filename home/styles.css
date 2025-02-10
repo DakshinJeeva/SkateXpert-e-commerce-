@@ -1,0 +1,723 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.home {
+    background-color: rgb(200, 227, 225);
+    height: 110vh;
+    color: white;
+}
+
+nav {
+    background: #c8e3e1; /* Navbar background */
+    height: 120px; /* Increase the height of the navbar */
+    width: 100%;
+    display: flex;
+    align-items: center; /* Keep links and icons vertically aligned */
+    justify-content: space-between;
+    padding: 0 20px; /* Add horizontal padding */
+    position: relative; /* Ensures the navbar's position doesn't affect other elements */
+}
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+label.logo {
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    z-index: 100; /* Keeps the links vertically aligned */
+}
+
+nav ul li {
+    line-height: 50px;
+}
+
+nav ul li a {
+    
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+
+
+/* Hide menu icon by default */
+.checkbtn {
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+.icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.icons a {
+    color: #000000;
+    font-size: 22px;
+}
+
+.icons a:hover {
+    background-color: #c8e3e1;
+    color: #27b0a0;
+    transition: 0.3s;
+}
+.checkbtn:hover{
+    background-color: #c8e3e1;
+    color: #27b0a0;
+    transition: 0.3s;
+}
+/* Hide menu icon by default */
+.checkbtn {
+    font-size: 22px;
+    color: #000000;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 20px;
+}
+/* Hide the checkbox */
+#check {
+    display: none;
+}
+
+
+@media (max-width: 890px) {
+    
+    .icons {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        margin-right: 40px;
+        transition: 0.5s;
+    }
+    .checkbtn {
+        display: block;
+    }
+    nav ul {
+        padding-top: 80px;
+        position: fixed;
+        width: 50%;
+        height: 100vh;
+        background-color: #c8e3e1;
+        top: 1px;
+        left: -100%;
+        text-align: center;
+        flex-direction: column;
+        transition: all .75s;
+        justify-content: flex-start;
+    }
+    
+    
+    /* Show the menu when the checkbox is checked */
+    #check:checked ~ ul {
+        left: 0;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+}
+.nav-link {
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    transition: all 0.5s;
+    color: #000000;
+    font-size: 16px;
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Only apply hover effect to .nav-link */
+.nav-link:hover {
+    background: none;
+    border: 2px solid #27b0a0;
+    color: #27b0a0;
+    border-radius: 20px;
+}
+/* Define the slide-in animation */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%); /* Start off-screen to the left */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* End at the normal position */
+    }
+}
+.home {
+    min-height: 100vh; 
+    padding-bottom: 0; 
+}
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 10%;
+    background-color: #e8f7f5; /* Light teal background */
+    min-height: 80vh; /* Set the hero section to at least 80% of the viewport height */
+}
+
+
+.hero-content {
+    max-width: 45%;
+    text-align: left;
+}
+
+.hero-content h4 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-family: 'Anton', sans-serif;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.hero-content .btn {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.hero-content .btn:hover {
+    background-color: #27b0a0;
+    color: #fff;
+}
+
+.hero-image img {
+    max-width: 100%; /* Increase the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: scale(1.2); /* Scale the image to make it appear larger */
+    transition: transform 0.3s ease; /* Add a smooth transition for hover effect */
+}
+
+.hero-image img:hover {
+    transform: scale(1.3); /* Slightly enlarge the image on hover */
+}
+
+
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-image img {
+        max-width: 80%;
+    }
+}
+.nav-link {
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    transition: all 0.5s;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    font-family: "Bebas Neue", sans-serif; /* Apply Bebas Neue font */
+    font-weight: 400; /* Ensure the correct weight is applied */
+}
+.martian-mono-hero-title {
+    font-family: "Martian Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 800; /* Use a weight of 800 for bold titles */
+    font-style: normal;
+    font-variation-settings: "wdth" 97.6;
+}
+
+.martian-mono-hero-subtitle {
+    font-family: "Martian Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* Use a lighter weight for subtitles */
+    font-style: normal;
+    font-variation-settings: "wdth" 97.6;
+}
+@media (max-width: 850px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+    }
+
+    .hero-content {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem; /* Reduce font size for smaller screens */
+    }
+
+    .hero-content h4 {
+        font-size: 1.1rem; /* Adjust subtitle size */
+        margin-bottom: 8px;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem; /* Slightly smaller text for better fit */
+        line-height: 1.6; /* Maintain readability */
+    }
+
+    .hero-content .btn {
+        padding: 8px 15px; /* Adjust button size */
+        font-size: 0.9rem; /* Smaller font size for button */
+        border-radius: 25px;
+    }
+
+    .hero-image img {
+        max-width: 90%; /* Adjust image size for smaller screens */
+        transform: scale(1); /* Default scale for smaller screens */
+        border-radius: 10px;
+    }
+}
+@media (max-width: 600px) {
+    .hero-section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start; /* Move content to the top */
+        text-align: center;
+        padding: 10% 10% 0; /* Reduce padding from the top */
+        background-image: url("images/skating-shoe.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+        min-height: 70vh; /* Full viewport height */
+    }
+
+    .hero-content {
+         /* Semi-transparent background for contrast */
+        padding: 15px;
+        border-radius: 10px;
+        margin-top: 5%; /* Add some spacing from the top */
+        max-width: 99%; /* Limit the width of the text */
+    }
+
+    .hero-content h1 {
+        font-size: 2rem; /* Adjust heading size */
+        margin-bottom: 10px;
+    }
+
+    .hero-content h4 {
+        font-size: 1rem; /* Adjust subtitle size */
+        margin-bottom: 8px;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem; /* Adjust paragraph text size */
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+
+    .hero-content .btn {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+        border-radius: 20px;
+        background-color: #000000;
+        color: white;
+    }
+
+    .hero-content .btn:hover {
+        background-color: #1a7f73;
+    }
+
+    .hero-image {
+        display: none; /* Hide the image element */
+    }
+}
+.hero-content h1,
+.hero-content h4,
+.hero-content p {
+    animation: slideIn 1s ease-out forwards; /* Apply slideIn animation */
+    opacity: 0; /* Ensure it starts invisible */
+}
+
+/* Add slight delays for cascading effect */
+.hero-content h1 {
+    animation-delay: 0.2s; /* First to slide in */
+}
+
+.hero-content h4 {
+    animation-delay: 0.4s; /* Slightly after h1 */
+}
+
+.hero-content p {
+    animation-delay: 0.6s; /* Last to slide in */
+}
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%); /* For image: start off-screen right */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* End at its normal position */
+    }
+}
+.hero-image img {
+    animation: slideInRight 1s ease-out forwards; /* Slide in from right */
+    opacity: 0; /* Start invisible */
+    animation-delay: 0.8s; /* Start after text animations */
+}
+.bottom-banner {
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: rgb(0, 0, 0); /* Text color */
+    padding: 20px 0;
+}
+
+.main-heading {
+    font-family: "Bebas Neue", sans-serif; /* Apply Bebas Neue font */
+    font-size: 2.5rem; /* Adjust the font size */
+    margin-bottom: 10px;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.sub-heading {
+    font-family: "Martian Mono", serif; /* Apply Martian Mono font */
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+/* Style for the product section */
+.product-section {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    overflow: hidden; /* Hide the overflow so that we don't see extra products */
+    padding: 20px 0;
+}
+
+/* Container for the boxes */
+.product-container {
+    display: flex;
+    justify-content: center; /* Center the products horizontally */
+    gap: 10px; /* Space between products */
+    animation: scroll-horizontal 12s linear infinite; /* Scrolling animation */
+}
+
+/* Individual product boxes */
+.product-box {
+    min-width: 200px; /* Set the width for each box */
+    height: 200px; /* Set the height for each box */
+    background-color: #ddd; /* Background color for the boxes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #ccc; /* Optional border */
+    border-radius: 8px; /* Optional rounded corners */
+}
+.product-container {
+    display: flex;
+    width: calc(100% * 3); /* Adjust width based on number of visible items */
+}
+
+.product-container .product-box {
+    min-width: 200px; /* Ensure all boxes have the same width */
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Animation for infinite horizontal scrolling */
+@keyframes scroll-horizontal {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-40%); /* Move the items by the width of 3 items */
+    }
+}
+/* Additional Section Styles */
+.additional-section {
+    padding: 50px 10%;
+    background-color: #e9eef3; /* Light gray background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.additional-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.additional-content .left-content {
+    max-width: 50%;
+}
+
+.additional-content .left-content h2 {
+    font-size: 2rem;
+    font-family: "Bebas Neue", sans-serif;
+    color: #000;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.additional-content .left-content p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.additional-content .left-content .btn {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.additional-content .left-content .btn:hover {
+    background-color: #1a7f73;
+}
+
+.additional-content .right-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 850px) {
+    .additional-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .additional-content .left-content {
+        max-width: 100%;
+    }
+
+    .additional-content .right-content img {
+        max-width: 80%;
+        margin: 20px 0;
+    }
+}
+.products-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.products-section h1 {
+    text-align: left;
+    margin: 20px 0;
+    font-size: 40px;
+    color: #333;
+    border-bottom: 2px solid #ff6f61;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 1024px) {
+    .products-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .products-container {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+}
+
+
+
+.products-box {
+    display: flex;
+    flex-direction: column; /* Stack the elements vertically */
+    align-items: center;    /* Center elements horizontally */
+    justify-content: flex-start;
+    align-items: center;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.products-box img {
+    width: 100%;          /* Ensures the image takes the full width of its container */
+    height: 200px; 
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.products-box h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 10px 0 5px;
+}
+
+.products-box p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.products-box p:last-child {
+    font-size: 18px;
+   
+    font-weight: bold;
+}
+
+.products-box:hover {
+    transform: none; /* Ensure no hover animation */
+    background: #fefefe; /* Optional subtle effect */
+}
+.product-image {
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+    width: 250px; /* Optional: Can be adjusted based on your design */
+    height: 250px; /* Fixed height for consistency */
+    overflow: hidden; /* Ensures images don't overflow the container */
+    margin-bottom: 10px;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%; /* Adjust image size */
+    object-fit: cover;
+}
+.product-details{
+    text-align: center;
+}
+.product-details h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.product-details p {
+    margin: 5px 0;
+}
+
+.product-detailes .p1{
+    color: #1a7f73;
+}
+.add-to-cart-btn {
+    background-color: #27b0a0;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #000000;
+}
+.add-to-cart-btn.clicked {
+    animation: click-animation 0.5s ease-out;
+}
+
+/* Click Animation */
+@keyframes click-animation {
+    0% {
+        transform: scale(1);
+        background-color: #000000;
+    }
+    30% {
+        transform: scale(1.1); /* Slightly larger on click */
+        background-color: #000000;
+    }
+    50% {
+        transform: scale(1); /* Return to original size */
+        background-color: #000000;
+    }
+    100% {
+        transform: scale(1);
+        background-color: #000000;
+    }
+}
+.products-box p.price {
+    font-size: 18px;
+    color: #ff6f61;  /* Change this to your preferred color */
+    font-weight: bold;  /* Increase the boldness */
+    margin: 5px 0;
+}

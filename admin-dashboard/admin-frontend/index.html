@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+        <form method="POST" action="logout.php">
+            <button type="submit">Logout</button>
+        </form>
+    </header>
+
+    <main>
+        <section>
+            <h2>Add Product</h2>
+            <form id="productForm">
+                <input type="text" id="name" name="name" placeholder="Enter product name" required>
+                <input type="number" id="price" name="price" placeholder="Enter price" required>
+                <input type="file" id="image" name="image" accept="image/*" required>
+                <select id="category" name="category" required>
+                    <option value="" disabled selected>Select Category</option>
+                    <option value="Boots">Boots</option>
+                    <option value="Bearings">Bearings</option>
+                    <option value="Skin Suit">Skin Suit</option>
+                    <option value="Wheel">Wheel</option>
+                </select>
+                <input type="text" id="description" name="description" placeholder="Enter product description" required>
+                <input type="number" id="stock" name="stock" placeholder="Enter stock quantity" required>
+                <button type="submit">Add Product</button>
+            </form>
+        </section>
+
+        <section id="productList">
+            <h2>Product List</h2>
+            <!-- Product items will be dynamically listed here -->
+        </section>
+    </main>
+
+    <script src="app.js"></script> <!-- Assuming app.js contains your app logic -->
+</body>
+</html>

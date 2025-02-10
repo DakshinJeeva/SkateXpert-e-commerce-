@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        div{
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px #000000;
+            text-align: center;
+        }
+        body{
+            background-color: #c8e3e1;
+        }
+        form {
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #27b0a0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px #000000;
+            text-align: center;
+        }
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #27b0a0;
+            border-radius: 5px;
+        }
+        button {
+            width: 45%;
+            padding: 10px;
+            margin: 10px 2.5%;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .signin-btn {
+            background-color: #27b0a0;
+            color: white;
+        }
+        .signin-btn:hover {
+            background-color: #000000;
+        }
+        .signup-btn {
+            background-color: #27b0a0;
+            color: white;
+        }
+        .signup-btn:hover {
+            background-color: #000000;
+        }
+        .or-divider {
+            margin-left: 50;
+            font-size: 16px;
+            color: #666;
+            font-weight: bold;
+            border: none;
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="signup.php" method="POST">
+        <h2>Sign Up</h2>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <input type="text" id="phone" name="phone" placeholder="Enter your phone number (10 digits)" required>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <button type="submit" class="signin-btn" onclick="location.href='verify.html'">Sign Up</button>
+    </form>
+</body>
+</html>
