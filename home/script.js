@@ -5,6 +5,7 @@ document.addEventListener('click', function(event) {
     
     if (checkbox.checked && !navbar.contains(event.target)) {
         checkbox.checked = false; 
+    }
 });
 
 const container = document.querySelector('.product-container');
